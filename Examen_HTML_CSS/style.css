@@ -1,0 +1,127 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+        /* Reset and basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .header {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0.1em; /* Reduced padding */
+            line-height: 0.8; /* Adds some space for descenders */
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: red;
+            transform: translateY(3px); /* Adjust this value to move the line up/down */
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: blue;
+            transform: translateY(6px); /* Adjust this value to move the line up/down */
+        }
+
+        /* Main container */
+        .container {
+            display:flex;
+            flex: 1;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Navigation links */
+        #links {
+            text-align: center;
+        }
+
+        #links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        #links a:hover {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        /* List styling */
+        ul {
+            
+            text-align: left;
+        }
+
+        .li1 {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        .li2 {
+            margin-left: 20px;
+            list-style-type: circle;
+        }
+
+        li {
+            padding: 10px 0;
+            list-style-position: inside;
+        }
+        .btn{
+            width: -webkit-fill-available;
+        }
+
+
+
+
+
+
+

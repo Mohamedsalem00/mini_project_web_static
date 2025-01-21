@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+
+:root {
+    --padding-mobile: 16px;
+    --padding-tablet: 40px;
+    --padding-desktop: 60px;
+    --max-width: 100%;
+    --min-width: 320px;
+    --primary-color: #ff385c;
+}
+
+body {
+    background-color: #fff;
+    min-width: var(--min-width);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-mobile);
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: clamp(24px, 4vw, 32px);
+    flex-shrink: 0;
+}
+
+.airbnbplus {
+font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+font-size: 24px;
+display: flex;
+align-items: center;
+
+}
+
+.airbnbplus .fab {
+font-size: 30px; /* Adjust the icon size */
+margin-right: 5px; /* Space between icon and text */
+}
+
+.airbnbplus span {
+font-weight: bold;
+font-size: 24px; /* Adjust the font size to match your design */
+}
+
+
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 850px;
+    margin: 0 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    width: 100%;
+    transition: box-shadow 0.2s ease;
+}
+
+.search-bar i {
+    
+    margin-right: 12px;
+}
+
+.search-bar:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.search-bar:focus-within {
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+}
+
+.nav-links {
+    display: none;
+    gap: 24px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 22px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #f7f7f7;
+}
+
+/* Main Content */
+.main-content {
+    padding: var(--padding-mobile);
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 20px auto;
+}
+
+.section-title {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    margin-bottom: clamp(16px, 3vw, 32px);
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 32px);
+    margin-bottom: clamp(24px, 4vw, 48px);
+    width: 100%;
+}
+
+.explore-card {
+    display: flex;
+    align-items: center;
+    padding: clamp(16px, 3vw, 24px);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+}
+
+.explore-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.explore-card img {
+    width: clamp(48px, 10vw, 80px);
+    height: clamp(48px, 10vw, 80px);
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: clamp(12px, 2vw, 20px);
+}
+
+.explore-card h3 {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: #222;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f7f7f7;
+    padding: clamp(24px, 4vw, 48px);
+    border-radius: 12px;
+    margin-top: clamp(24px, 4vw, 48px);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero-section h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: clamp(16px, 3vw, 24px);
+}
+
+.explore-button {
+    display: inline-block;
+    padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: clamp(16px, 3vw, 24px);
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .navbar {
+        padding: var(--padding-tablet);
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .main-content {
+        padding: var(--padding-tablet);
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar {
+        padding: var(--padding-desktop);
+    }
+
+    .main-content {
+        padding: var(--padding-desktop);
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar, .main-content {
+        padding: calc(var(--padding-desktop) + 20px);
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .navbar {
+        padding: var(--padding-desktop);
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 12px;
+    border: 1px solid #ddd;
+    border-radius: 21px;
+    cursor: pointer;
+    background: white;
+    transition: box-shadow 0.2s ease;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+    .navbar {
+        padding: var(--padding-tablet);
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+}
+
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('./img/image1.png');
+    background-size: cover;
+    background-position: center;
+    padding: clamp(48px, 8vw, 120px) clamp(24px, 4vw, 48px);
+    border-radius: 12px;
+    margin-top: clamp(24px, 4vw, 48px);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: white;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: clamp(16px, 3vw, 24px);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin-bottom: clamp(24px, 4vw, 32px);
+    max-width: 600px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button {
+    display: inline-block;
+    padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+    background-color: white;
+    color: #222;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.explore-button:hover {
+    transform: scale(1.05);
+    background-color: #f7f7f7;
+}
